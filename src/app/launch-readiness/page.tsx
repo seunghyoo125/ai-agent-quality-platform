@@ -3,174 +3,93 @@ export default function LaunchReadiness() {
       {
         name: "PwC Intelligence Hub",
         owner: "Seung Yoo",
-        tier: "critical",
+        tier: "Critical",
         target: "2/28/2025",
-        status: "not_assessed",
-        passRate: null,
-        alerts: 1,
-        alertText: "Never assessed",
-        actions: 1,
-        actionText: "Initial assessment needed"
+        status: "At Risk",
+        passRate: "54%",
+        alerts: 2,
+        alertTexts: ["Below 70% threshold", "Source citation at 62%"],
+        actions: 2,
+        actionTexts: ["Improve document selection", "Calibrate retrieval weights"]
       },
       {
         name: "User Story Generator",
-        owner: "Laura Liu",
-        tier: "standard",
-        target: "1/20/14",
-        status: "not_assessed",
-        passRate: null,
+        owner: "Tom Brady",
+        tier: "Standard",
+        target: "3/15/2025",
+        status: "Not Assessed",
+        passRate: "—",
         alerts: 1,
-        alertText: "Never assessed",
+        alertTexts: ["Never assessed"],
         actions: 1,
-        actionText: "Initial assessment needed"
+        actionTexts: ["Initial assessment needed"]
       },
       {
         name: "Fit-Gap Analyzer",
-        owner: "Maylen Leung",
-        tier: "standard",
-        target: null,
-        status: "not_assessed",
-        passRate: null,
-        alerts: 1,
-        alertText: "Never assessed",
+        owner: "Michael Jordan",
+        tier: "Standard",
+        target: "3/20/2025",
+        status: "On Track",
+        passRate: "78%",
+        alerts: 0,
+        alertTexts: [],
         actions: 1,
-        actionText: "Initial assessment needed"
+        actionTexts: ["Run final validation"]
       },
       {
         name: "KDD Builder",
-        owner: "Laura Liu",
-        tier: "standard",
+        owner: "Kobe Bryant",
+        tier: "Standard",
         target: null,
-        status: "not_assessed",
-        passRate: null,
+        status: "Not Assessed",
+        passRate: "—",
         alerts: 1,
-        alertText: "Never assessed",
+        alertTexts: ["No target date set"],
         actions: 1,
-        actionText: "Initial assessment needed"
+        actionTexts: ["Schedule assessment"]
       },
       {
         name: "RAICEF Listing Generator",
-        owner: "Laura Liu",
-        tier: "standard",
-        target: null,
-        status: "not_assessed",
-        passRate: null,
+        owner: "Justin Jefferson",
+        tier: "Standard",
+        target: "4/1/2025",
+        status: "Not Assessed",
+        passRate: "—",
         alerts: 1,
-        alertText: "Never assessed",
+        alertTexts: ["Never assessed"],
         actions: 1,
-        actionText: "Initial assessment needed"
+        actionTexts: ["Initial assessment needed"]
       },
-      {
-        name: "Configuration Workbook Details Agent",
-        owner: "Laura Liu",
-        tier: "standard",
-        target: null,
-        status: "not_assessed",
-        passRate: null,
-        alerts: 1,
-        alertText: "Never assessed",
-        actions: 1,
-        actionText: "Initial assessment needed"
-      }
     ]
+  
+    const getStatusColor = (status: string) => {
+      switch(status) {
+        case "At Risk": return "bg-red-100 text-red-700"
+        case "On Track": return "bg-green-100 text-green-700"
+        case "Not Assessed": return "bg-gray-200 text-gray-700"
+        default: return "bg-gray-200 text-gray-700"
+      }
+    }
   
     return (
       <div className="p-8">
         {/* Header */}
         <div className="mb-6">
-          <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-3 mb-4">
-            <span className="text-sm">⚠️ medium</span>
-            <span className="text-sm ml-4">Initial assessment needed</span>
-            <span className="text-sm ml-4">RAICEF Listing Generator has never been assessed...</span>
-            <div className="mt-2">
-              <span className="text-sm font-semibold">RAICEF Listing Generator</span>
-              <span className="text-sm ml-4">Laura Liu</span>
-              <span className="text-sm ml-4">1/20/14</span>
-              <button className="text-sm text-[#d97757] ml-4">Take Action luz1h2</button>
-            </div>
-          </div>
-  
-          <h1 className="text-2xl font-semibold mb-2">Agents</h1>
-          <p className="text-sm text-[#6b6a63] mb-4">View all 8 actions</p>
+          <h1 className="text-2xl font-semibold mb-2">Launch Readiness</h1>
+          <p className="text-sm text-[#6b6a63] mb-4">Production readiness status across agent portfolio</p>
         </div>
   
         {/* Agent Cards Grid */}
         <div className="space-y-4">
-          <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="font-semibold">{agents[0].name}</h3>
-                  <span className="px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded">NOT ASSESSED</span>
-                </div>
-              </div>
-            </div>
-  
-            <div className="grid grid-cols-4 gap-6 mb-4">
-              <div>
-                <div className="text-xs text-[#6b6a63] mb-1">Pass Rate</div>
-                <div className="text-2xl font-bold">—</div>
-              </div>
-              <div>
-                <div className="text-xs text-[#6b6a63] mb-1">Gates</div>
-                <div className="text-sm">— Worst</div>
-                <div className="text-sm">—</div>
-              </div>
-              <div>
-                <div className="text-xs text-[#6b6a63] mb-1">Latency</div>
-                <div className="text-sm">— Cost</div>
-                <div className="text-sm">—</div>
-              </div>
-            </div>
-  
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <div>
-                <div className="flex items-center gap-2 text-sm text-red-600 mb-1">
-                  <span>⚠</span>
-                  <span className="font-semibold">ALERTS (1)</span>
-                </div>
-                <div className="text-sm text-[#6b6a63]">• Never assessed</div>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 text-sm mb-1">
-                  <span>○</span>
-                  <span className="font-semibold">ACTIONS (1)</span>
-                </div>
-                <div className="text-sm text-[#6b6a63]">• Initial assessment needed</div>
-              </div>
-            </div>
-  
-            <div className="flex items-center justify-between pt-4 border-t border-[#e8e6dc]">
-              <div className="flex gap-6 text-sm">
-                <div>
-                  <span className="text-[#6b6a63]">Owner: </span>
-                  <span>{agents[0].owner}</span>
-                </div>
-                <div>
-                  <span className="text-[#6b6a63]">Target: </span>
-                  <span>—</span>
-                </div>
-                <div>
-                  <span className="text-[#6b6a63]">Tier: </span>
-                  <span>{agents[0].tier}</span>
-                </div>
-                <div>
-                  <span className="text-[#6b6a63]">Assessed: </span>
-                  <span>Never</span>
-                </div>
-              </div>
-              <button className="text-sm text-[#d97757] font-medium">View Details →</button>
-            </div>
-          </div>
-  
-          {/* Repeat for other agents */}
-          {agents.slice(1).map((agent, idx) => (
-            <div key={idx} className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
+          {agents.map((agent, idx) => (
+            <div key={idx} className="bg-white rounded-2xl p-6 border border-[#e8e6dc] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="font-semibold">{agent.name}</h3>
-                    <span className="px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded">NOT ASSESSED</span>
+                    <h3 className="font-semibold text-lg">{agent.name}</h3>
+                    <span className={`px-2 py-1 text-xs rounded font-medium ${getStatusColor(agent.status)}`}>
+                      {agent.status.toUpperCase()}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -178,57 +97,61 @@ export default function LaunchReadiness() {
               <div className="grid grid-cols-4 gap-6 mb-4">
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Pass Rate</div>
-                  <div className="text-2xl font-bold">—</div>
+                  <div className={`text-2xl font-bold ${agent.passRate === "—" ? "text-gray-400" : agent.passRate === "54%" ? "text-red-500" : "text-green-600"}`}>
+                    {agent.passRate}
+                  </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#6b6a63] mb-1">Gates</div>
-                  <div className="text-sm">— Worst</div>
-                  <div className="text-sm">—</div>
+                  <div className="text-xs text-[#6b6a63] mb-1">Owner</div>
+                  <div className="text-sm font-medium">{agent.owner}</div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#6b6a63] mb-1">Latency</div>
-                  <div className="text-sm">— Cost</div>
-                  <div className="text-sm">—</div>
+                  <div className="text-xs text-[#6b6a63] mb-1">Target Date</div>
+                  <div className="text-sm">{agent.target || "—"}</div>
+                </div>
+                <div>
+                  <div className="text-xs text-[#6b6a63] mb-1">Tier</div>
+                  <div className="text-sm">{agent.tier}</div>
                 </div>
               </div>
   
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
-                  <div className="flex items-center gap-2 text-sm text-red-600 mb-1">
-                    <span>⚠</span>
+                  <div className={`flex items-center gap-2 text-sm mb-2 ${agent.alerts > 0 ? 'text-red-600' : 'text-gray-500'}`}>
+                    <span>{agent.alerts > 0 ? '⚠' : '✓'}</span>
                     <span className="font-semibold">ALERTS ({agent.alerts})</span>
                   </div>
-                  <div className="text-sm text-[#6b6a63]">• {agent.alertText}</div>
+                  {agent.alertTexts.length > 0 ? (
+                    <div className="space-y-1">
+                      {agent.alertTexts.map((alert, i) => (
+                        <div key={i} className="text-sm text-[#6b6a63]">• {alert}</div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-sm text-gray-400">No alerts</div>
+                  )}
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 text-sm mb-1">
+                  <div className="flex items-center gap-2 text-sm mb-2">
                     <span>○</span>
                     <span className="font-semibold">ACTIONS ({agent.actions})</span>
                   </div>
-                  <div className="text-sm text-[#6b6a63]">• {agent.actionText}</div>
+                  <div className="space-y-1">
+                    {agent.actionTexts.map((action, i) => (
+                      <div key={i} className="text-sm text-[#6b6a63]">• {action}</div>
+                    ))}
+                  </div>
                 </div>
               </div>
   
               <div className="flex items-center justify-between pt-4 border-t border-[#e8e6dc]">
                 <div className="flex gap-6 text-sm">
                   <div>
-                    <span className="text-[#6b6a63]">Owner: </span>
-                    <span>{agent.owner}</span>
-                  </div>
-                  <div>
-                    <span className="text-[#6b6a63]">Target: </span>
-                    <span>{agent.target || "—"}</span>
-                  </div>
-                  <div>
-                    <span className="text-[#6b6a63]">Tier: </span>
-                    <span>{agent.tier}</span>
-                  </div>
-                  <div>
-                    <span className="text-[#6b6a63]">Assessed: </span>
-                    <span>Never</span>
+                    <span className="text-[#6b6a63]">Last Assessed: </span>
+                    <span>{agent.status === "Not Assessed" ? "Never" : "2/10/2025"}</span>
                   </div>
                 </div>
-                <button className="text-sm text-[#d97757] font-medium">View Details →</button>
+                <button className="text-sm text-[#d97757] font-medium hover:underline">View Details →</button>
               </div>
             </div>
           ))}

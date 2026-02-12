@@ -20,6 +20,28 @@ This platform provides the evaluation infrastructure to answer those questions t
 
 ---
 
+**Key Features:**
+- Experiment run as core abstraction (versioned configs, structured artifacts, reproducibility)
+- Configuration A/B testing with multi-dimensional performance analysis
+- Calibrated LLM-as-judge scoring aligned to human evaluation
+- Dimensional failure slicing via test taxonomy (difficulty × capability × domain)
+- Threshold-based production gating with blocking conditions
+
+---
+
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Experiments
+![Experiments](screenshots/experiments.png)
+
+### Launch Readiness
+![Launch Readiness](screenshots/launch-readiness.png)
+
+---
+
 ## Core Abstraction
 
 The core abstraction is the **experiment run**: a versioned test set evaluated against a specific agent configuration, producing structured metrics, failure artifacts, and regression comparisons.
@@ -32,7 +54,7 @@ This enables reproducible evaluation, systematic tradeoff analysis, and confiden
 
 ### 1. **Experiment Tracking** (Experiments)
 
-Systematic comparison of configurations through controlled evaluation runs.
+Controlled comparison of configurations through evaluation runs.
 
 **A/B Experiments:**
 - Configuration comparison across different agent modes
@@ -48,8 +70,6 @@ Systematic comparison of configurations through controlled evaluation runs.
 **Model Comparison:**
 - Side-by-side performance across LLM providers
 - Latency and cost benchmarking
-
-**Value:** Move from trial-and-error to systematic optimization through controlled experiments.
 
 ---
 
@@ -68,8 +88,6 @@ Curated test sets with dimensional performance analysis.
 - Performance slicing by difficulty, capability, domain
 - Pass rate trends over time
 
-**Value:** Understand not just "what failed" but "why it failed" and "where to optimize."
-
 ---
 
 ### 3. **Production Readiness** (Launch Readiness)
@@ -81,8 +99,6 @@ Threshold-based release gating with blocking conditions and decision artifacts.
 - Blocking conditions and alert system
 - Owner tracking and target timelines
 - Release decision documentation
-
-**Value:** Production decisions based on explicit criteria and documented tradeoffs.
 
 ---
 
@@ -96,13 +112,11 @@ Aggregate visibility across the agent development lifecycle.
 - System readiness indicators
 - Recent activity feed
 
-**Value:** Portfolio-level observability for prioritization and stakeholder communication.
-
 ---
 
 ### 5. **Evaluation Automation** (Prompt Calibration)
 
-Calibrated LLM-as-judge for scaled evaluation capacity.
+Reduces manual review load through calibrated LLM scoring.
 
 **3-Question Framework:**
 - Simplified scoring (Answer/Sources/Response quality)
@@ -113,8 +127,6 @@ Calibrated LLM-as-judge for scaled evaluation capacity.
 - Human-LLM agreement measurement
 - Threshold-based automation trust
 - Iteration tracking for prompt improvement
-
-**Value:** Scale human evaluation capacity 10x through calibrated automation.
 
 ---
 
@@ -130,15 +142,15 @@ Simplified from complex rubrics to three yes/partial/no questions:
 Each dimension includes granular issue tags for detailed failure analysis.
 
 **Why this works:**
-- Reduces cognitive load - evaluators score 3x faster
+- Reduces cognitive load for human evaluators
 - Maintains analytical depth through issue tags
-- Enables LLM-as-judge calibration to 85%+ agreement
+- Supports LLM-as-judge calibration workflows
 - Balances simplicity with actionable insights
 
 **Implementation:**
 - Human evaluators answer three simple questions
 - Issue tags applied only when answer isn't "Yes"
-- LLM judges trained to match human scoring patterns
+- LLM judges calibrated to approximate human scoring patterns
 - Disagreements flagged for human review
 
 ---
@@ -173,7 +185,7 @@ Intelligent routing by query difficulty:
 
 **Impact:** 31% cost reduction vs always-Research while maintaining 87% average quality (vs 91% all-Research).
 
-**Insight:** Configuration isn't one-size-fits-all. Different query types benefit from different performance profiles. Systematic experimentation reveals the tradeoffs.
+**Insight:** Configuration isn't one-size-fits-all. Different query types benefit from different performance profiles.
 
 ---
 
@@ -187,7 +199,7 @@ Test cases tagged across multiple dimensions for granular performance analysis.
 - **Difficulty:** Easy, Medium, Hard
 - **Domain:** BRD, FSD, SOW, Governance, Test Artifacts, Meeting/Comms
 
-**Value:** Enables slicing results to understand "which configurations work best for what types of queries."
+**Enables slicing results to understand which configurations work best for what types of queries.**
 
 **Example Insights:**
 - Research mode critical for Retrieval-Isolated tasks (92% vs 68% Fastest)
@@ -195,7 +207,7 @@ Test cases tagged across multiple dimensions for granular performance analysis.
 - Edge Cases demand Research configuration regardless of difficulty (88% Research vs 55% Fastest)
 
 **Coverage Dashboard:**
-Visual tracking of test distribution across dimensions to identify gaps. Example: "We have 347 Core Functional tests but only 20 Adversarial tests - need more safety coverage."
+Visual tracking of test distribution across dimensions to identify gaps.
 
 ---
 
@@ -203,17 +215,14 @@ Visual tracking of test distribution across dimensions to identify gaps. Example
 
 Threshold-based release gating with structured decision artifacts.
 
-**Beyond Point-in-Time Metrics:**
+**Components:**
 - Quality thresholds per agent
 - Blocking conditions with severity levels
 - Decision documentation and approval workflow
 - Risk assessment tracking
 
 **Example Decision Artifact:**
-"PwC Intelligence Hub at 54% pass rate - below 70% threshold. Blocking: Source citation accuracy (62%). Recommended action: Focus on improving document selection. Target resolution: 2/28."
-
-**Value:**
-Production decisions involve tradeoffs and risk assessment. This provides infrastructure for structured decisions with documented reasoning.
+"Intelligence Hub at 54% pass rate - below 70% threshold. Blocking: Source citation accuracy (62%). Recommended action: Focus on improving document selection. Target resolution: 2/28."
 
 ---
 
@@ -306,25 +315,23 @@ Judge prompt registry, calibration status, accuracy tracking, configuration
 
 ## Design Philosophy
 
-**Systematic over ad-hoc:** Controlled experiments replace trial-and-error
-**Multi-dimensional analysis:** Understand performance across query types, not just aggregates
-**Calibrated automation:** Scale human evaluation through aligned LLM judges
-**Production-oriented:** Decision support for real deployment trade-offs
-**Evidence-based:** Data-driven optimization, not gut feel
+**Controlled experiments over trial-and-error**
+**Multi-dimensional analysis beyond aggregates**
+**Calibrated automation to reduce manual review**
+**Evidence-based decision support**
 
 ---
 
 ## Future Directions
 
-**Natural extensions:**
 - Real-time evaluation execution engine
 - Integration with vector databases and LLM APIs
 - Statistical significance testing for experiments
 - Automated regression detection and alerting
-- Collaborative review workflows (case assignment, annotation tracking)
-- Trace-level debugging (retrieval steps, LLM calls, tool use)
+- Collaborative review workflows
+- Trace-level debugging
 - Cost tracking and budget management
-- Prompt optimization suggestions based on failure patterns
+- Prompt optimization suggestions
 
 ---
 
