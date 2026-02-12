@@ -61,7 +61,7 @@ export default function Experiments() {
               <h3 className="text-base font-semibold mb-4">Configuration Details</h3>
               <div className="grid grid-cols-3 gap-6">
                 <div className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="font-semibold mb-2">⚡ Fastest Mode</h4>
+                  <h4 className="font-semibold mb-2">Fastest Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Vector search only</li>
                     <li>• Top-k: 5 documents</li>
@@ -70,7 +70,7 @@ export default function Experiments() {
                   </ul>
                 </div>
                 <div className="border-l-4 border-green-500 pl-4">
-                  <h4 className="font-semibold mb-2">⚖️ Balanced Mode</h4>
+                  <h4 className="font-semibold mb-2">Balanced Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Hybrid (Vector + BM25)</li>
                     <li>• Top-k: 10 documents</li>
@@ -79,7 +79,7 @@ export default function Experiments() {
                   </ul>
                 </div>
                 <div className="border-l-4 border-purple-500 pl-4">
-                  <h4 className="font-semibold mb-2">🔬 Research Mode</h4>
+                  <h4 className="font-semibold mb-2">Research Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Hybrid + Web search</li>
                     <li>• Top-k: 15 documents</li>
