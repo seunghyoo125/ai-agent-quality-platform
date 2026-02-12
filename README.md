@@ -173,7 +173,7 @@ Tested 3 agent configurations across 250 test cases to find optimal settings for
 
 | Configuration | Overall | Easy | Medium | Hard | Latency | Cost |
 |--------------|---------|------|--------|------|---------|------|
-| Fastest | 78% | 78% ✓ | 74% | 65% | 0.6s ⚡ | $0.002 💰 |
+| Fastest | 78% | 78% ✓ | 74% | 65% | 0.6s | $0.002 |
 | Balanced | 85% | 82% | 85% ✓ | 78% | 1.2s | $0.005 |
 | Research | 91% | 85% | 89% | 91% ✓ | 3.5s | $0.015 |
 
