@@ -1,20 +1,22 @@
 # AI Agent Evaluation Platform
 
-> Systematic evaluation, experiment tracking, and performance optimization for RAG agents
+> Systematic evaluation, experiment tracking, and performance optimization for AI agents
 
 ---
 
 ## Overview
 
-Modern AI teams building RAG systems face a core infrastructure challenge: **how do you systematically measure agent behavior, compare configurations, and optimize for production?**
+Modern AI teams building LLM applications face a core infrastructure challenge: **how do you systematically measure agent behavior, compare configurations, and optimize for production?**
 
 This platform provides the evaluation infrastructure to answer those questions through:
-- Controlled experimentation across RAG configurations
+- Controlled experimentation across agent configurations
 - Multi-dimensional performance measurement
 - Calibrated automation for scaled evaluation
 - Production readiness decision support
 
-**Built for:** ML/AI teams developing production RAG systems who need to compare configurations, measure performance across test sets, optimize retrieval strategies, and make evidence-based deployment decisions.
+**Built for:** ML/AI teams developing production LLM applications who need to compare configurations, measure performance across test sets, optimize agent behavior, and make evidence-based deployment decisions.
+
+*Note: Performance data shown is illustrative for demonstration purposes.*
 
 ---
 
@@ -33,7 +35,7 @@ This enables reproducible evaluation, systematic tradeoff analysis, and confiden
 Systematic comparison of configurations through controlled evaluation runs.
 
 **A/B Experiments:**
-- RAG configuration comparison (Vector vs Hybrid vs Research modes)
+- Configuration comparison across different agent modes
 - Performance breakdown by query difficulty and agent capability
 - Cost/quality/speed tradeoff analysis
 - Optimization insights for intelligent routing
@@ -141,14 +143,14 @@ Each dimension includes granular issue tags for detailed failure analysis.
 
 ---
 
-### 2. **Retrieval Configuration Experiments**
+### 2. **Configuration Experiments**
 
-Tested 3 RAG configurations across 250 test cases to find optimal settings for different query types.
+Tested 3 agent configurations across 250 test cases to find optimal settings for different query types.
 
 **Configurations:**
-- **Fastest Mode:** Vector-only search, top-k=5, no reranking
-- **Balanced Mode:** Hybrid search (vector + BM25), top-k=10, rerank top-3
-- **Research Mode:** Hybrid + web search, top-k=15, rerank top-5, multi-hop reasoning
+- **Fastest Mode:** Optimized for low latency and cost
+- **Balanced Mode:** Moderate speed/cost/quality tradeoff
+- **Research Mode:** Optimized for quality over speed/cost
 
 **Analysis Dimensions:**
 - Query difficulty (Easy/Medium/Hard)
@@ -171,7 +173,7 @@ Intelligent routing by query difficulty:
 
 **Impact:** 31% cost reduction vs always-Research while maintaining 87% average quality (vs 91% all-Research).
 
-**Insight:** Configuration isn't one-size-fits-all. Different query types benefit from different retrieval strategies. Systematic experimentation reveals the tradeoffs.
+**Insight:** Configuration isn't one-size-fits-all. Different query types benefit from different performance profiles. Systematic experimentation reveals the tradeoffs.
 
 ---
 
@@ -190,7 +192,7 @@ Test cases tagged across multiple dimensions for granular performance analysis.
 **Example Insights:**
 - Research mode critical for Retrieval-Isolated tasks (92% vs 68% Fastest)
 - Balanced mode sufficient for Core Functional (88% vs 90% Research - not worth 3x cost)
-- Edge Cases demand comprehensive search regardless of difficulty (88% Research vs 55% Fastest)
+- Edge Cases demand Research configuration regardless of difficulty (88% Research vs 55% Fastest)
 
 **Coverage Dashboard:**
 Visual tracking of test distribution across dimensions to identify gaps. Example: "We have 347 Core Functional tests but only 20 Adversarial tests - need more safety coverage."
@@ -208,7 +210,7 @@ Threshold-based release gating with structured decision artifacts.
 - Risk assessment tracking
 
 **Example Decision Artifact:**
-"PwC Intelligence Hub at 54% pass rate - below 70% threshold. Blocking: Source citation accuracy (62%). Recommended action: Focus retrieval tuning on document selection. Target resolution: 2/28."
+"PwC Intelligence Hub at 54% pass rate - below 70% threshold. Blocking: Source citation accuracy (62%). Recommended action: Focus on improving document selection. Target resolution: 2/28."
 
 **Value:**
 Production decisions involve tradeoffs and risk assessment. This provides infrastructure for structured decisions with documented reasoning.
@@ -217,10 +219,10 @@ Production decisions involve tradeoffs and risk assessment. This provides infras
 
 ## Experiment Workflow Example
 
-**Scenario:** Optimize retrieval for PwC Intelligence Hub agent
+**Scenario:** Optimize agent configuration for the Intelligence Hub
 
 **1. Hypothesis**
-Different query types may benefit from different retrieval strategies. Easy queries might not need expensive hybrid search.
+Different query types may benefit from different performance profiles. Easy queries might not need expensive Research mode.
 
 **2. Experiment Design**
 - Configurations: Fastest, Balanced, Research
@@ -284,7 +286,7 @@ npm run dev
 Agent lifecycle stages, quality metrics, system status, activity feed
 
 ### Experiments
-- A/B Experiments: RAG config comparison, performance analysis
+- A/B Experiments: Configuration comparison, performance analysis
 - Judge Calibration: LLM-human alignment measurement
 - Golden Set Evals: Test execution history, regression tracking
 
@@ -328,7 +330,7 @@ Judge prompt registry, calibration status, accuracy tracking, configuration
 
 ## About
 
-This platform was built to enable systematic evaluation and optimization of AI agents. The frameworks and analysis approaches reflect production requirements: comparing configurations, measuring behavior across test sets, optimizing for cost and quality, and making evidence-based deployment decisions.
+This platform enables systematic evaluation and optimization of AI agents. The frameworks and analysis approaches reflect production requirements: comparing configurations, measuring behavior across test sets, optimizing for cost and quality, and making evidence-based deployment decisions.
 
 ---
 
