@@ -113,13 +113,13 @@ export default function Experiments() {
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Avg Latency</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">0.6s ⚡</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">0.6s </td>
                     <td className="px-6 py-4 text-center text-sm">1.2s</td>
                     <td className="px-6 py-4 text-center text-sm text-red-600">3.5s</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Avg Cost per Query</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">$0.002 💰</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">$0.002 </td>
                     <td className="px-6 py-4 text-center text-sm">$0.005</td>
                     <td className="px-6 py-4 text-center text-sm text-red-600">$0.015</td>
                   </tr>
