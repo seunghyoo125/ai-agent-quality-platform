@@ -2,8 +2,6 @@
 
 > Systematic evaluation, experiment tracking, and performance optimization for RAG agents
 
-I built this platform at PwC for evaluating production AI agents. This repo is a rebuild on my personal machine for public sharing.
-
 ---
 
 ## Overview
