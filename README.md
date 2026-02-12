@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Agent Quality & Experimentation Platform
 
-## Getting Started
+> A prototype platform for systematic evaluation and production readiness of AI agents.
 
-First, run the development server:
+## Overview
 
+An enterprise-grade platform for managing the full lifecycle of AI agent development, evaluation, and deployment. Built to solve a core infrastructure challenge: **how do you scale AI quality assurance without bottlenecking on human review?**
+
+This platform provides the foundational systems that enable ML practitioners to develop, test, and deploy AI agents with confidence — transforming ad-hoc quality checks into systematic, measurable, and auditable workflows.
+
+## Key Capabilities
+
+- **Agent Lifecycle Management** - Track agents from backlog through build, testing, and production
+- **Systematic Evaluation** - Golden test sets with dimensional taxonomy (capability, difficulty, scenario type)
+- **Calibrated Automation** - LLM-as-judge scoring aligned to human judgment
+- **Production Readiness Gates** - Data-driven launch decisions with explicit quality criteria
+- **Portfolio Dashboard** - Visual status tracking across all agents
+
+## What Makes This Different
+
+Most LLM evaluation tools focus on running tests and showing scores.
+
+This platform implements a **quality assurance operating model** for AI agents:
+
+1. **Systematic Testing** - Dimensional taxonomy, not just pass/fail
+2. **Calibrated Automation** - Know when to trust LLM judges vs human review
+3. **Production Readiness** - Explicit gates and criteria for launch decisions
+4. **Continuous Improvement** - Regression tracking and quality trends
+5. **Decision Support** - What to fix, what to build next, what's blocking launch
+
+Built to answer: **"Is this agent ready for production?"** not just "What's the accuracy?"
+
+## Tech Stack
+
+- **Next.js 16** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Mock Data** - Prototype demonstration (no backend required)
+
+## Demo Screenshots
+
+### Dashboard
+The main overview showing agent lifecycle stages, quality metrics, and system status.
+
+### Launch Readiness
+Portfolio view of all agents with production readiness status, alerts, and actions.
+
+## Running Locally
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Platform Modules
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Dashboard
+- Agent lifecycle stages (Live, Testing, Build, Backlog)
+- Quality metrics (pass rate, evaluations, test coverage)
+- System readiness status
+- Activity feed
 
-## Learn More
+### 2. Launch Readiness
+- Agent portfolio with status cards
+- Quality gates and readiness criteria
+- Alerts and pending actions
+- Owner, tier, and target date tracking
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Golden Sets (Planned)
+- Test case management with dimensional tagging
+- Coverage analysis across capabilities and scenarios
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Results Dashboard (Planned)
+- Performance breakdowns by dimension
+- Failure driver analysis
+- Trend tracking over time
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 5. Judge Calibration (Planned)
+- Human vs LLM agreement metrics
+- Calibration workflow for automation trust
 
-## Deploy on Vercel
+## Note
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This is a **design prototype** built to explore systematic approaches to AI agent quality assurance. The platform concepts and frameworks are production-ready thinking; the implementation is for demonstration purposes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Built with Claude and Cursor**
