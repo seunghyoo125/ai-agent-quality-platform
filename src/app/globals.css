@@ -16,3 +16,21 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text-dark);
 }
+
+/* Smooth transitions */
+button,
+a,
+.card {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Button hover effects */
+button:hover,
+a:hover {
+  opacity: 0.9;
+}
