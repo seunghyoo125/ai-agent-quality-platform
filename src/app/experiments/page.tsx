@@ -60,7 +60,7 @@ export default function Experiments() {
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] shadow-sm mb-6">
               <h3 className="text-base font-semibold mb-4">Configuration Details</h3>
               <div className="grid grid-cols-3 gap-6">
-                <div className="border-l-4 border-blue-500 pl-4">
+                <div className="border-l-4 border-red-400 pl-4">
                   <h4 className="font-semibold mb-2">Fastest Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Vector search only</li>
@@ -69,7 +69,7 @@ export default function Experiments() {
                     <li>• Target: Easy queries</li>
                   </ul>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-orange-400 pl-4">
                   <h4 className="font-semibold mb-2">Balanced Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Hybrid (Vector + BM25)</li>
@@ -78,7 +78,7 @@ export default function Experiments() {
                     <li>• Target: Medium queries</li>
                   </ul>
                 </div>
-                <div className="border-l-4 border-purple-500 pl-4">
+                <div className="border-l-4 border-amber-400 pl-4">
                   <h4 className="font-semibold mb-2">Research Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Hybrid + Web search</li>
@@ -238,7 +238,7 @@ export default function Experiments() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-blue-500 rounded"></div>
+                      <div className="w-3 h-3 bg-red-400 rounded"></div>
                       <span className="text-sm font-medium">Fastest Mode</span>
                     </div>
                     <span className="text-sm text-[#6b6a63]">78% quality • 0.6s • $0.002</span>
@@ -247,7 +247,7 @@ export default function Experiments() {
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Quality</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-blue-500 h-2 rounded-full" style={{width: '78%'}}></div>
+                        <div className="bg-red-400 h-2 rounded-full" style={{width: '78%'}}></div>
                       </div>
                     </div>
                     <div>
@@ -268,7 +268,7 @@ export default function Experiments() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-green-500 rounded"></div>
+                      <div className="w-3 h-3 bg-orange-400 rounded"></div>
                       <span className="text-sm font-medium">Balanced Mode</span>
                     </div>
                     <span className="text-sm text-[#6b6a63]">85% quality • 1.2s • $0.005</span>
@@ -277,7 +277,7 @@ export default function Experiments() {
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Quality</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{width: '85%'}}></div>
+                        <div className="bg-orange-400 h-2 rounded-full" style={{width: '85%'}}></div>
                       </div>
                     </div>
                     <div>
@@ -298,7 +298,7 @@ export default function Experiments() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-purple-500 rounded"></div>
+                      <div className="w-3 h-3 bg-amber-400 rounded"></div>
                       <span className="text-sm font-medium">Research Mode</span>
                     </div>
                     <span className="text-sm text-[#6b6a63]">91% quality • 3.5s • $0.015</span>
@@ -307,7 +307,7 @@ export default function Experiments() {
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Quality</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-purple-500 h-2 rounded-full" style={{width: '91%'}}></div>
+                        <div className="bg-amber-400 h-2 rounded-full" style={{width: '91%'}}></div>
                       </div>
                     </div>
                     <div>
@@ -328,7 +328,7 @@ export default function Experiments() {
             </div>
 
             {/* Routing Strategy */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-2 border-blue-200 shadow-sm">
+            <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl p-6 border-2 border-[#e8e6dc] shadow-sm">
               <h3 className="text-base font-semibold mb-3 flex items-center gap-2">
                 <span>💡</span>
                 <span>Intelligent Routing Strategy</span>
@@ -365,8 +365,8 @@ export default function Experiments() {
                   </p>
                 </div>
               </div>
-              <div className="mt-4 p-3 bg-blue-100 rounded-lg">
-                <p className="text-sm font-medium text-blue-900">
+              <div className="mt-4 p-3 bg-orange-100 rounded-lg">
+                <p className="text-sm font-medium text-orange-900">
                   Result: 31% cost reduction vs always using Research mode, while maintaining 87% average quality (vs 91% all-Research).
                 </p>
               </div>
@@ -435,9 +435,9 @@ export default function Experiments() {
             Calibrate LLM-as-judge against human judgment to ensure automated scoring is reliable.
           </p>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-            <p className="text-sm text-blue-900">
-              💡 <strong>How calibration works:</strong> Upload human scores, run LLM judge on same cases, measure agreement. 
+          <div className="bg-[#faf9f5] border border-[#e8e6dc] rounded-lg p-4 mb-6">
+            <p className="text-sm text-[#6b6a63]">
+              💡 <strong>How calibration works:</strong> Upload human scores, run LLM judge on same cases, measure agreement.
               Iterate on judge prompts until alignment reaches target threshold (85%+).
             </p>
           </div>
@@ -605,7 +605,7 @@ export default function Experiments() {
             </p>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-blue-500 pl-4">
+              <div className="border-l-4 border-red-400 pl-4">
                 <h4 className="font-semibold mb-2">1. Is the answer correct?</h4>
                 <div className="text-sm text-[#6b6a63] mb-2">
                   <strong>Options:</strong> Yes • Partially • No
@@ -615,7 +615,7 @@ export default function Experiments() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-green-500 pl-4">
+              <div className="border-l-4 border-orange-400 pl-4">
                 <h4 className="font-semibold mb-2">2. Are the sources correct?</h4>
                 <div className="text-sm text-[#6b6a63] mb-2">
                   <strong>Options:</strong> Yes • Partially • No
@@ -625,7 +625,7 @@ export default function Experiments() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-purple-500 pl-4">
+              <div className="border-l-4 border-amber-400 pl-4">
                 <h4 className="font-semibold mb-2">3. Is the response appropriate?</h4>
                 <div className="text-sm text-[#6b6a63] mb-2">
                   <strong>Options:</strong> Yes (Good) • Partially (Average) • No (Not Good)
@@ -726,9 +726,9 @@ export default function Experiments() {
             </div>
           </div>
 
-          <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <p className="text-sm text-blue-900">
-              💡 <strong>Track Performance:</strong> Run evaluations regularly to catch regressions early. 
+          <div className="mt-8 p-4 bg-[#faf9f5] border border-[#e8e6dc] rounded-lg">
+            <p className="text-sm text-[#6b6a63]">
+              💡 <strong>Track Performance:</strong> Run evaluations regularly to catch regressions early.
               Compare results across runs to understand if changes improved or degraded quality.
             </p>
           </div>
