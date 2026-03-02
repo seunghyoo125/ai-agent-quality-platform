@@ -17,7 +17,7 @@ export default function GoldenSets() {
         <button className="px-4 py-2 bg-white border border-[#e8e6dc] rounded-lg text-sm flex items-center gap-2">
           📥 Import TSV
         </button>
-        <button className="px-4 py-2 bg-orange-500 text-white rounded-lg text-sm flex items-center gap-2">
+        <button className="px-4 py-2 bg-[#d97757] text-white rounded-lg text-sm flex items-center gap-2">
           ✨ Import Eval Results
         </button>
         <button className="px-4 py-2 bg-white border border-[#e8e6dc] rounded-lg text-sm flex items-center gap-2">
@@ -74,6 +74,7 @@ export default function GoldenSets() {
             </div>
           </div>
 
+
           {/* By Capability */}
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
             <h3 className="text-sm font-semibold mb-4">By Capability</h3>
@@ -91,7 +92,7 @@ export default function GoldenSets() {
                     <span className="text-xs font-semibold">{value} ({pct}%)</span>
                   </div>
                   <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                    <div className="bg-[#d97757] h-2 rounded-full" style={{ width: `${pct}%` }} />
+                    <div className="bg-[#c4a882] h-2 rounded-full" style={{ width: `${pct}%` }} />
                   </div>
                 </div>
               ))}
@@ -108,7 +109,7 @@ export default function GoldenSets() {
                   <span className="text-xs font-semibold">158 (30%)</span>
                 </div>
                 <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                  <div className="bg-emerald-500 h-2 rounded-full" style={{ width: '30%' }} />
+                  <div className="bg-[#8fba98] h-2 rounded-full" style={{ width: '30%' }} />
                 </div>
               </div>
               <div>
@@ -117,7 +118,7 @@ export default function GoldenSets() {
                   <span className="text-xs font-semibold">238 (45%)</span>
                 </div>
                 <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                  <div className="bg-yellow-500 h-2 rounded-full" style={{ width: '45%' }} />
+                  <div className="bg-[#d4a96a] h-2 rounded-full" style={{ width: '45%' }} />
                 </div>
               </div>
               <div>
@@ -126,7 +127,7 @@ export default function GoldenSets() {
                   <span className="text-xs font-semibold">132 (25%)</span>
                 </div>
                 <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                  <div className="bg-red-500 h-2 rounded-full" style={{ width: '25%' }} />
+                  <div className="bg-[#c98888] h-2 rounded-full" style={{ width: '25%' }} />
                 </div>
               </div>
             </div>
@@ -152,7 +153,7 @@ export default function GoldenSets() {
                     <span className="text-xs font-semibold">{value} ({pct}%)</span>
                   </div>
                   <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                    <div className="bg-[#d97757] h-2 rounded-full" style={{ width: `${pct}%` }} />
+                    <div className="bg-[#8fba98] h-2 rounded-full" style={{ width: `${pct}%` }} />
                   </div>
                 </div>
               ))}
@@ -179,7 +180,7 @@ export default function GoldenSets() {
                     <span className="text-xs font-semibold">{pct}%</span>
                   </div>
                   <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                    <div className="bg-[#d97757] h-2 rounded-full" style={{ width: `${pct}%` }} />
+                    <div className="bg-[#c8a84c] h-2 rounded-full" style={{ width: `${pct}%` }} />
                   </div>
                 </div>
               ))}
@@ -191,10 +192,10 @@ export default function GoldenSets() {
             <h3 className="text-sm font-semibold mb-4">By Verification Status</h3>
             <div className="space-y-3">
               {[
-                { label: 'Unverified', pct: 42, color: 'bg-gray-400' },
-                { label: 'Verified', pct: 38, color: 'bg-green-500' },
-                { label: 'Corrected', pct: 14, color: 'bg-yellow-500' },
-                { label: 'Disputed', pct: 6, color: 'bg-red-400' },
+                { label: 'Unverified', pct: 42, color: 'bg-[#b5b0a8]' },
+                { label: 'Verified', pct: 38, color: 'bg-[#8fba98]' },
+                { label: 'Corrected', pct: 14, color: 'bg-[#d4a96a]' },
+                { label: 'Disputed', pct: 6, color: 'bg-[#c98888]' },
               ].map(({ label, pct, color }) => (
                 <div key={label}>
                   <div className="flex items-center justify-between mb-1">
@@ -223,7 +224,7 @@ export default function GoldenSets() {
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-1">
                 <h3 className="font-semibold text-lg">HelloWorks</h3>
-                <span className="px-2.5 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
+                <span className="px-2.5 py-0.5 bg-[#faeade] text-[#d97757] rounded-full text-xs font-medium">
                   Search/Retrieval
                 </span>
               </div>
@@ -261,7 +262,7 @@ export default function GoldenSets() {
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-1">
                 <h3 className="font-semibold text-lg">FDA</h3>
-                <span className="px-2.5 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
+                <span className="px-2.5 py-0.5 bg-[#faeade] text-[#d97757] rounded-full text-xs font-medium">
                   Search/Retrieval
                 </span>
               </div>
@@ -298,7 +299,7 @@ export default function GoldenSets() {
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-1">
                 <h3 className="font-semibold text-lg">HelloWorks</h3>
-                <span className="px-2.5 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
+                <span className="px-2.5 py-0.5 bg-[#faeade] text-[#d97757] rounded-full text-xs font-medium">
                   Search/Retrieval
                 </span>
               </div>
