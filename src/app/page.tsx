@@ -122,18 +122,7 @@ export default function Dashboard() {
         {/* System - Is the Platform Ready? */}
         <section className="mb-8">
           <h2 className="text-lg font-semibold mb-4">SYSTEM — IS THE PLATFORM READY?</h2>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm text-[#6b6a63]">Intake Pending</span>
-                <button className="text-sm text-[#d97757]">View</button>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-emerald-600 mb-2">
-                <span>✓</span>
-                <span>All reviewed</span>
-              </div>
-            </div>
-  
+          <div className="grid grid-cols-2 gap-4">
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm text-[#6b6a63]">Prompts</span>

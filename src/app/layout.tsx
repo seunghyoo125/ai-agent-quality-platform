@@ -52,14 +52,8 @@ export default function RootLayout({
                 <div>
                   <p className="text-xs font-semibold text-[#6b6a63] mb-2 px-3">LIFECYCLE</p>
                   <div className="space-y-1">
-                    <Link 
-                      href="#" 
-                      className="flex items-center gap-3 px-3 py-2 rounded-lg text-[#6b6a63] hover:bg-[#faf9f5] transition-all"
-                    >
-                      <span className="text-sm">Intake & Prioritization</span>
-                    </Link>
-                    <Link 
-                      href="#" 
+                    <Link
+                      href="#"
                       className="flex items-center gap-3 px-3 py-2 rounded-lg text-[#6b6a63] hover:bg-[#faf9f5] transition-all"
                     >
                       <span className="text-sm">Agent Registry</span>
@@ -71,41 +65,61 @@ export default function RootLayout({
                 <div>
                   <p className="text-xs font-semibold text-[#6b6a63] mb-2 px-3">EVALUATION</p>
                   <div className="space-y-1">
-                    <Link 
-                      href="/golden-sets" 
+                    <Link
+                      href="/golden-sets"
                       className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
-                        pathname === '/golden-sets' 
-                          ? 'bg-[#d97757] text-white shadow-sm' 
+                        pathname === '/golden-sets'
+                          ? 'bg-[#d97757] text-white shadow-sm'
                           : 'text-[#6b6a63] hover:bg-[#faf9f5]'
                       }`}
                     >
                       <span className="text-sm">Golden Sets</span>
                     </Link>
-                    <Link 
-                      href="/experiments" 
+                    <Link
+                      href="/eval-profiles"
                       className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
-                        pathname === '/experiments' 
-                          ? 'bg-[#d97757] text-white shadow-sm' 
+                        pathname === '/eval-profiles'
+                          ? 'bg-[#d97757] text-white shadow-sm'
+                          : 'text-[#6b6a63] hover:bg-[#faf9f5]'
+                      }`}
+                    >
+                      <span className="text-sm">Eval Profiles</span>
+                    </Link>
+                    <Link
+                      href="/experiments"
+                      className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
+                        pathname === '/experiments'
+                          ? 'bg-[#d97757] text-white shadow-sm'
                           : 'text-[#6b6a63] hover:bg-[#faf9f5]'
                       }`}
                     >
                       <span className="text-sm">Experiments</span>
                     </Link>
-                    <Link 
-                      href="/results" 
+                    <Link
+                      href="/results"
                       className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
-                        pathname === '/results' 
-                          ? 'bg-[#d97757] text-white shadow-sm' 
+                        pathname === '/results'
+                          ? 'bg-[#d97757] text-white shadow-sm'
                           : 'text-[#6b6a63] hover:bg-[#faf9f5]'
                       }`}
                     >
                       <span className="text-sm">Results</span>
                     </Link>
-                    <Link 
-                      href="/launch-readiness" 
+                    <Link
+                      href="/issue-patterns"
                       className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
-                        pathname === '/launch-readiness' 
-                          ? 'bg-[#d97757] text-white shadow-sm' 
+                        pathname === '/issue-patterns'
+                          ? 'bg-[#d97757] text-white shadow-sm'
+                          : 'text-[#6b6a63] hover:bg-[#faf9f5]'
+                      }`}
+                    >
+                      <span className="text-sm">Issue Patterns</span>
+                    </Link>
+                    <Link
+                      href="/launch-readiness"
+                      className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${
+                        pathname === '/launch-readiness'
+                          ? 'bg-[#d97757] text-white shadow-sm'
                           : 'text-[#6b6a63] hover:bg-[#faf9f5]'
                       }`}
                     >
