@@ -17,7 +17,7 @@ export default function GoldenSets() {
         <button className="px-4 py-2 bg-white border border-[#e8e6dc] rounded-lg text-sm flex items-center gap-2">
           📥 Import TSV
         </button>
-        <button className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm flex items-center gap-2">
+        <button className="px-4 py-2 bg-orange-500 text-white rounded-lg text-sm flex items-center gap-2">
           ✨ Import Eval Results
         </button>
         <button className="px-4 py-2 bg-white border border-[#e8e6dc] rounded-lg text-sm flex items-center gap-2">
@@ -223,7 +223,7 @@ export default function GoldenSets() {
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-1">
                 <h3 className="font-semibold text-lg">HelloWorks</h3>
-                <span className="px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                <span className="px-2.5 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
                   Search/Retrieval
                 </span>
               </div>
@@ -261,7 +261,7 @@ export default function GoldenSets() {
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-1">
                 <h3 className="font-semibold text-lg">FDA</h3>
-                <span className="px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                <span className="px-2.5 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
                   Search/Retrieval
                 </span>
               </div>
@@ -298,7 +298,7 @@ export default function GoldenSets() {
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-1">
                 <h3 className="font-semibold text-lg">HelloWorks</h3>
-                <span className="px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                <span className="px-2.5 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
                   Search/Retrieval
                 </span>
               </div>

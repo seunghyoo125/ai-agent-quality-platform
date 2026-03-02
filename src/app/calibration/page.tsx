@@ -47,7 +47,7 @@ export default function Calibration() {
   
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] col-span-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
                 📊
               </div>
               <div>
