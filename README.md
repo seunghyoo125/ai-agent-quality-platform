@@ -31,11 +31,20 @@ This platform provides the evaluation infrastructure to answer those questions t
 
 ## Screenshots
 
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
+### Golden Sets
+![Golden Sets](screenshots/golden-sets.png)
+
+### Eval Profiles
+![Eval Profiles](screenshots/eval-profiles.png)
 
 ### Experiments
 ![Experiments](screenshots/experiments.png)
+
+### Results
+![Results](screenshots/results.png)
+
+### Issue Patterns
+![Issue Patterns](screenshots/issue-patterns.png)
 
 ### Launch Readiness
 ![Launch Readiness](screenshots/launch-readiness.png)

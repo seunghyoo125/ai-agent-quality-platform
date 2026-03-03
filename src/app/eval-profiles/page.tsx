@@ -6,7 +6,7 @@ const profiles = [
     evalMode: 'Answer-based',
     scoringScale: 'Yes / Partially / No',
     judgeStatus: 'calibrated',
-    agents: ['PwC Intelligence Hub'],
+    agents: ['Intelligence Hub'],
     goldenSets: 3,
     dimensions: [
       {

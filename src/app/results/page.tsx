@@ -67,7 +67,7 @@ export default function Results() {
       <div className="mb-6">
         <label className="text-sm text-[#6b6a63] mr-3">Filters:</label>
         <select className="px-3 py-2 border border-[#e8e6dc] rounded-lg text-sm">
-          <option>PwC Intelligence Hub</option>
+          <option>Intelligence Hub</option>
         </select>
       </div>
 

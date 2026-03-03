@@ -40,7 +40,7 @@ export default function GoldenSets() {
           All Agents
         </button>
         <button className="px-4 py-2 bg-white border border-[#e8e6dc] rounded-lg text-sm">
-          PwC Intelligence Hub
+          Intelligence Hub
         </button>
       </div>
 
@@ -252,7 +252,7 @@ export default function GoldenSets() {
           </div>
 
           <div className="mt-4 text-sm text-[#6b6a63]">
-            🏷️ PwC Intelligence Hub
+            🏷️ Intelligence Hub
           </div>
         </div>
 
@@ -289,7 +289,7 @@ export default function GoldenSets() {
           </div>
 
           <div className="mt-4 text-sm text-[#6b6a63]">
-            🏷️ PwC Intelligence Hub
+            🏷️ Intelligence Hub
           </div>
         </div>
 
@@ -324,7 +324,7 @@ export default function GoldenSets() {
           </div>
 
           <div className="mt-4 text-sm text-[#6b6a63]">
-            🏷️ PwC Intelligence Hub
+            🏷️ Intelligence Hub
           </div>
         </div>
       </div>

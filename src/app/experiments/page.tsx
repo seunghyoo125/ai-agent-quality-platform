@@ -661,7 +661,7 @@ export default function Experiments() {
             </button>
             <select className="px-4 py-2 border border-[#e8e6dc] rounded-lg text-sm">
               <option>All Agents</option>
-              <option>PwC Intelligence Hub</option>
+              <option>Intelligence Hub</option>
               <option>User Story Generator</option>
             </select>
           </div>
@@ -675,7 +675,7 @@ export default function Experiments() {
                     <span className="text-xl">⚠️</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold">PwC Intelligence Hub - HelloWorks Set</h3>
+                    <h3 className="font-semibold">Intelligence Hub - HelloWorks Set</h3>
                     <p className="text-sm text-[#6b6a63]">Run on 2/12/2026 • 28 cases</p>
                   </div>
                 </div>

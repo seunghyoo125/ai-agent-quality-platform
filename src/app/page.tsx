@@ -23,7 +23,7 @@ export default function Dashboard() {
                 <span className="text-sm text-[#6b6a63]">In Testing</span>
               </div>
               <div className="text-4xl font-bold mb-2">1</div>
-              <div className="text-sm text-[#141413]">PwC Intelligence Hub</div>
+              <div className="text-sm text-[#141413]">Intelligence Hub</div>
             </div>
   
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
@@ -99,7 +99,7 @@ export default function Dashboard() {
             <div className="space-y-3">
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm">PwC Intelligence Hub</span>
+                  <span className="text-sm">Intelligence Hub</span>
                   <span className="text-sm font-semibold">54%</span>
                 </div>
                 <div className="w-full bg-[#faf9f5] rounded-full h-2">
@@ -165,7 +165,7 @@ export default function Dashboard() {
               </div>
               <div className="space-y-2 text-sm">
                 <div>• Evaluation completed<br/><span className="text-[#6b6a63]">Agent — 40%</span></div>
-                <div>• Evaluation completed<br/><span className="text-[#6b6a63]">PwC Intelligence Hub — 54%</span></div>
+                <div>• Evaluation completed<br/><span className="text-[#6b6a63]">Intelligence Hub — 54%</span></div>
               </div>
             </div>
   
@@ -174,7 +174,7 @@ export default function Dashboard() {
                 <span className="text-sm text-[#6b6a63]">Needs Attention</span>
               </div>
               <div className="space-y-2 text-sm">
-                <div>⚠ PwC Intelligence Hub at 54% pass rate<br/><span className="text-[#6b6a63] text-xs">Needs review</span></div>
+                <div>⚠ Intelligence Hub at 54% pass rate<br/><span className="text-[#6b6a63] text-xs">Needs review</span></div>
                 <div>⚠ Judge not calibrated<br/><span className="text-[#6b6a63] text-xs">Agents — Run Tests</span></div>
                 <div>⚠ 2 agents need migration testing<br/><span className="text-[#6b6a63] text-xs">Run Tests</span></div>
               </div>

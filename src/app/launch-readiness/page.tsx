@@ -1,7 +1,7 @@
 export default function LaunchReadiness() {
     const agents = [
       {
-        name: "PwC Intelligence Hub",
+        name: "Intelligence Hub",
         owner: "Seung Yoo",
         tier: "Critical",
         target: "2/28/2025",
