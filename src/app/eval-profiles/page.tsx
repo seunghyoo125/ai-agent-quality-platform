@@ -11,17 +11,17 @@ const profiles = [
     dimensions: [
       {
         name: 'Answer Correctness',
-        color: 'bg-red-100 text-red-700',
+        color: 'bg-[#fde8e8] text-[#c98888]',
         tags: ['factually-incorrect', 'missing-info', 'over-interpretation'],
       },
       {
         name: 'Source Correctness',
-        color: 'bg-orange-100 text-orange-700',
+        color: 'bg-[#faeade] text-[#d97757]',
         tags: ['missed-docs', 'wrong-docs', 'unverifiable'],
       },
       {
         name: 'Response Quality',
-        color: 'bg-blue-100 text-blue-700',
+        color: 'bg-[#e8eef5] text-[#7a95b0]',
         tags: ['too-verbose', 'didnt-answer', 'scope-creep'],
       },
     ],
@@ -36,17 +36,17 @@ const profiles = [
     dimensions: [
       {
         name: 'Completeness',
-        color: 'bg-red-100 text-red-700',
+        color: 'bg-[#fde8e8] text-[#c98888]',
         tags: ['missing-section', 'incomplete-requirements', 'omitted-constraints'],
       },
       {
         name: 'Accuracy',
-        color: 'bg-orange-100 text-orange-700',
+        color: 'bg-[#faeade] text-[#d97757]',
         tags: ['factually-incorrect', 'misrepresented-data', 'wrong-format'],
       },
       {
         name: 'Clarity',
-        color: 'bg-blue-100 text-blue-700',
+        color: 'bg-[#e8eef5] text-[#7a95b0]',
         tags: ['ambiguous-language', 'too-technical', 'disorganized'],
       },
     ],
@@ -61,17 +61,17 @@ const profiles = [
     dimensions: [
       {
         name: 'Insight Correctness',
-        color: 'bg-red-100 text-red-700',
+        color: 'bg-[#fde8e8] text-[#c98888]',
         tags: ['wrong-metric', 'misinterpreted-trend', 'false-correlation'],
       },
       {
         name: 'Visualization Quality',
-        color: 'bg-orange-100 text-orange-700',
+        color: 'bg-[#faeade] text-[#d97757]',
         tags: ['wrong-chart-type', 'misleading-scale', 'missing-labels'],
       },
       {
         name: 'Narrative Quality',
-        color: 'bg-blue-100 text-blue-700',
+        color: 'bg-[#e8eef5] text-[#7a95b0]',
         tags: ['too-verbose', 'no-actionable-insight', 'scope-creep'],
       },
     ],
@@ -86,17 +86,17 @@ const profiles = [
     dimensions: [
       {
         name: 'Classification Accuracy',
-        color: 'bg-red-100 text-red-700',
+        color: 'bg-[#fde8e8] text-[#c98888]',
         tags: ['wrong-category', 'missed-priority', 'ambiguous-case'],
       },
       {
         name: 'Reasoning Transparency',
-        color: 'bg-orange-100 text-orange-700',
+        color: 'bg-[#faeade] text-[#d97757]',
         tags: ['unexplained-decision', 'missing-evidence', 'contradictory-logic'],
       },
       {
         name: 'Routing Correctness',
-        color: 'bg-blue-100 text-blue-700',
+        color: 'bg-[#e8eef5] text-[#7a95b0]',
         tags: ['wrong-team', 'missed-escalation', 'duplicate-routing'],
       },
     ],
@@ -111,17 +111,17 @@ const profiles = [
     dimensions: [
       {
         name: 'Depth of Analysis',
-        color: 'bg-red-100 text-red-700',
+        color: 'bg-[#fde8e8] text-[#c98888]',
         tags: ['surface-level', 'missed-nuance', 'incomplete-coverage'],
       },
       {
         name: 'Evidence Use',
-        color: 'bg-orange-100 text-orange-700',
+        color: 'bg-[#faeade] text-[#d97757]',
         tags: ['unsupported-claim', 'wrong-citation', 'cherry-picked'],
       },
       {
         name: 'Conclusion Quality',
-        color: 'bg-blue-100 text-blue-700',
+        color: 'bg-[#e8eef5] text-[#7a95b0]',
         tags: ['over-conclusion', 'hedging-too-much', 'irrelevant-recommendation'],
       },
     ],
@@ -152,11 +152,11 @@ export default function EvalProfiles() {
           <span className="text-[#6b6a63]">profiles</span>
         </div>
         <div className="bg-white border border-[#e8e6dc] rounded-xl px-4 py-3 flex items-center gap-2">
-          <span className="font-semibold text-green-600">3</span>
+          <span className="font-semibold text-[#6aaa7b]">3</span>
           <span className="text-[#6b6a63]">calibrated</span>
         </div>
         <div className="bg-white border border-[#e8e6dc] rounded-xl px-4 py-3 flex items-center gap-2">
-          <span className="font-semibold text-yellow-600">2</span>
+          <span className="font-semibold text-[#c8a84c]">2</span>
           <span className="text-[#6b6a63]">not calibrated</span>
         </div>
       </div>
@@ -173,14 +173,14 @@ export default function EvalProfiles() {
               <div>
                 <div className="flex items-center gap-3 mb-1">
                   <h2 className="text-lg font-semibold">{profile.name}</h2>
-                  <span className="px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                  <span className="px-2.5 py-0.5 bg-[#e8eef5] text-[#7a95b0] rounded-full text-xs font-medium">
                     {profile.evalMode}
                   </span>
                 </div>
                 <div className="flex items-center gap-4 text-xs text-[#6b6a63]">
-                  <span>Scoring: <span className="font-medium text-gray-700">{profile.scoringScale}</span></span>
-                  <span className={`flex items-center gap-1 font-medium ${profile.judgeStatus === 'calibrated' ? 'text-green-600' : 'text-yellow-600'}`}>
-                    <span className={`w-1.5 h-1.5 rounded-full ${profile.judgeStatus === 'calibrated' ? 'bg-green-500' : 'bg-yellow-500'}`}></span>
+                  <span>Scoring: <span className="font-medium text-[#6b6a63]">{profile.scoringScale}</span></span>
+                  <span className={`flex items-center gap-1 font-medium ${profile.judgeStatus === 'calibrated' ? 'text-[#6aaa7b]' : 'text-[#c8a84c]'}`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${profile.judgeStatus === 'calibrated' ? 'bg-[#8fba98]' : 'bg-[#d4a96a]'}`}></span>
                     Judge: {profile.judgeStatus}
                   </span>
                 </div>

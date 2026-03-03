@@ -19,7 +19,7 @@ export default function Experiments() {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             activeTab === 'ab-experiments' 
               ? 'bg-[#d97757] text-white shadow-sm' 
-              : 'bg-white border border-[#e8e6dc] hover:bg-gray-50'
+              : 'bg-white border border-[#e8e6dc] hover:bg-[#faf9f5]'
           }`}
         >
           A/B Experiments
@@ -29,7 +29,7 @@ export default function Experiments() {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             activeTab === 'judge-calibration' 
               ? 'bg-[#d97757] text-white shadow-sm' 
-              : 'bg-white border border-[#e8e6dc] hover:bg-gray-50'
+              : 'bg-white border border-[#e8e6dc] hover:bg-[#faf9f5]'
           }`}
         >
           Judge Calibration
@@ -39,7 +39,7 @@ export default function Experiments() {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             activeTab === 'golden-set-evals' 
               ? 'bg-[#d97757] text-white shadow-sm' 
-              : 'bg-white border border-[#e8e6dc] hover:bg-gray-50'
+              : 'bg-white border border-[#e8e6dc] hover:bg-[#faf9f5]'
           }`}
         >
           Golden Set Evals
@@ -60,7 +60,7 @@ export default function Experiments() {
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] shadow-sm mb-6">
               <h3 className="text-base font-semibold mb-4">Configuration Details</h3>
               <div className="grid grid-cols-3 gap-6">
-                <div className="border-l-4 border-red-400 pl-4">
+                <div className="border-l-4 border-[#c98888] pl-4">
                   <h4 className="font-semibold mb-2">Fastest Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Vector search only</li>
@@ -69,7 +69,7 @@ export default function Experiments() {
                     <li>• Target: Easy queries</li>
                   </ul>
                 </div>
-                <div className="border-l-4 border-orange-400 pl-4">
+                <div className="border-l-4 border-[#d97757] pl-4">
                   <h4 className="font-semibold mb-2">Balanced Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Hybrid (Vector + BM25)</li>
@@ -78,7 +78,7 @@ export default function Experiments() {
                     <li>• Target: Medium queries</li>
                   </ul>
                 </div>
-                <div className="border-l-4 border-amber-400 pl-4">
+                <div className="border-l-4 border-[#c8a84c] pl-4">
                   <h4 className="font-semibold mb-2">Research Mode</h4>
                   <ul className="text-sm text-[#6b6a63] space-y-1">
                     <li>• Hybrid + Web search</li>
@@ -92,11 +92,11 @@ export default function Experiments() {
 
             {/* Overall Results */}
             <div className="bg-white rounded-2xl border border-[#e8e6dc] shadow-sm overflow-hidden mb-6">
-              <div className="p-4 bg-gray-50 border-b border-[#e8e6dc]">
+              <div className="p-4 bg-[#faf9f5] border-b border-[#e8e6dc]">
                 <h3 className="text-base font-semibold">Overall Performance</h3>
               </div>
               <table className="w-full">
-                <thead className="bg-gray-50">
+                <thead className="bg-[#faf9f5]">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-[#6b6a63] uppercase">Metric</th>
                     <th className="px-6 py-3 text-center text-xs font-semibold text-[#6b6a63] uppercase">Fastest</th>
@@ -108,20 +108,20 @@ export default function Experiments() {
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Overall Pass Rate</td>
                     <td className="px-6 py-4 text-center text-sm">78%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">85%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-blue-600">91%</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">85%</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#7a95b0]">91%</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Avg Latency</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">0.6s </td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">0.6s </td>
                     <td className="px-6 py-4 text-center text-sm">1.2s</td>
-                    <td className="px-6 py-4 text-center text-sm text-red-600">3.5s</td>
+                    <td className="px-6 py-4 text-center text-sm text-[#c98888]">3.5s</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Avg Cost per Query</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">$0.002 </td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">$0.002 </td>
                     <td className="px-6 py-4 text-center text-sm">$0.005</td>
-                    <td className="px-6 py-4 text-center text-sm text-red-600">$0.015</td>
+                    <td className="px-6 py-4 text-center text-sm text-[#c98888]">$0.015</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Cases Evaluated</td>
@@ -135,12 +135,12 @@ export default function Experiments() {
 
             {/* Performance by Difficulty */}
             <div className="bg-white rounded-2xl border border-[#e8e6dc] shadow-sm overflow-hidden mb-6">
-              <div className="p-4 bg-gray-50 border-b border-[#e8e6dc]">
+              <div className="p-4 bg-[#faf9f5] border-b border-[#e8e6dc]">
                 <h3 className="text-base font-semibold">Performance by Query Difficulty</h3>
                 <p className="text-sm text-[#6b6a63] mt-1">Pass rate breakdown showing which mode works best for each difficulty level</p>
               </div>
               <table className="w-full">
-                <thead className="bg-gray-50">
+                <thead className="bg-[#faf9f5]">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-[#6b6a63] uppercase">Difficulty</th>
                     <th className="px-6 py-3 text-center text-xs font-semibold text-[#6b6a63] uppercase">Fastest</th>
@@ -152,7 +152,7 @@ export default function Experiments() {
                 <tbody className="divide-y divide-[#e8e6dc]">
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Easy Queries</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">78% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">78% ✓</td>
                     <td className="px-6 py-4 text-center text-sm">82%</td>
                     <td className="px-6 py-4 text-center text-sm">85%</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Fastest (minimal quality loss, 3x faster)</td>
@@ -160,15 +160,15 @@ export default function Experiments() {
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Medium Queries</td>
                     <td className="px-6 py-4 text-center text-sm">74%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">85% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">85% ✓</td>
                     <td className="px-6 py-4 text-center text-sm">89%</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Balanced (best cost/quality tradeoff)</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Hard Queries</td>
-                    <td className="px-6 py-4 text-center text-sm text-red-600">65%</td>
+                    <td className="px-6 py-4 text-center text-sm text-[#c98888]">65%</td>
                     <td className="px-6 py-4 text-center text-sm">78%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">91% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">91% ✓</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Research (quality-critical, worth cost)</td>
                   </tr>
                 </tbody>
@@ -177,12 +177,12 @@ export default function Experiments() {
 
             {/* Performance by Capability */}
             <div className="bg-white rounded-2xl border border-[#e8e6dc] shadow-sm overflow-hidden mb-6">
-              <div className="p-4 bg-gray-50 border-b border-[#e8e6dc]">
+              <div className="p-4 bg-[#faf9f5] border-b border-[#e8e6dc]">
                 <h3 className="text-base font-semibold">Performance by Capability</h3>
                 <p className="text-sm text-[#6b6a63] mt-1">Which retrieval mode performs best for different agent capabilities</p>
               </div>
               <table className="w-full">
-                <thead className="bg-gray-50">
+                <thead className="bg-[#faf9f5]">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-[#6b6a63] uppercase">Capability</th>
                     <th className="px-6 py-3 text-center text-xs font-semibold text-[#6b6a63] uppercase">Fastest</th>
@@ -195,21 +195,21 @@ export default function Experiments() {
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Core Functional</td>
                     <td className="px-6 py-4 text-center text-sm">82%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">88% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">88% ✓</td>
                     <td className="px-6 py-4 text-center text-sm">90%</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Balanced sufficient for most cases</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Retrieval Isolated</td>
-                    <td className="px-6 py-4 text-center text-sm text-red-600">68%</td>
+                    <td className="px-6 py-4 text-center text-sm text-[#c98888]">68%</td>
                     <td className="px-6 py-4 text-center text-sm">79%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">92% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">92% ✓</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Research mode critical for retrieval</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Synthesis</td>
                     <td className="px-6 py-4 text-center text-sm">76%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">84% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">84% ✓</td>
                     <td className="px-6 py-4 text-center text-sm">87%</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Balanced works well</td>
                   </tr>
@@ -217,14 +217,14 @@ export default function Experiments() {
                     <td className="px-6 py-4 text-sm font-medium">Reasoning</td>
                     <td className="px-6 py-4 text-center text-sm">72%</td>
                     <td className="px-6 py-4 text-center text-sm">81%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">89% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">89% ✓</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Complex reasoning needs more context</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm font-medium">Edge Cases</td>
-                    <td className="px-6 py-4 text-center text-sm text-red-600">55%</td>
+                    <td className="px-6 py-4 text-center text-sm text-[#c98888]">55%</td>
                     <td className="px-6 py-4 text-center text-sm">72%</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-green-600">88% ✓</td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-[#6aaa7b]">88% ✓</td>
                     <td className="px-6 py-4 text-sm text-[#6b6a63]">Edge cases demand comprehensive search</td>
                   </tr>
                 </tbody>
@@ -238,7 +238,7 @@ export default function Experiments() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-red-400 rounded"></div>
+                      <div className="w-3 h-3 bg-[#c98888] rounded"></div>
                       <span className="text-sm font-medium">Fastest Mode</span>
                     </div>
                     <span className="text-sm text-[#6b6a63]">78% quality • 0.6s • $0.002</span>
@@ -247,19 +247,19 @@ export default function Experiments() {
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Quality</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-red-400 h-2 rounded-full" style={{width: '78%'}}></div>
+                        <div className="bg-[#c98888] h-2 rounded-full" style={{width: '78%'}}></div>
                       </div>
                     </div>
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Speed (inverted)</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{width: '100%'}}></div>
+                        <div className="bg-[#8fba98] h-2 rounded-full" style={{width: '100%'}}></div>
                       </div>
                     </div>
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Cost Efficiency</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{width: '100%'}}></div>
+                        <div className="bg-[#8fba98] h-2 rounded-full" style={{width: '100%'}}></div>
                       </div>
                     </div>
                   </div>
@@ -268,7 +268,7 @@ export default function Experiments() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-orange-400 rounded"></div>
+                      <div className="w-3 h-3 bg-[#d97757] rounded"></div>
                       <span className="text-sm font-medium">Balanced Mode</span>
                     </div>
                     <span className="text-sm text-[#6b6a63]">85% quality • 1.2s • $0.005</span>
@@ -277,19 +277,19 @@ export default function Experiments() {
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Quality</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-orange-400 h-2 rounded-full" style={{width: '85%'}}></div>
+                        <div className="bg-[#d97757] h-2 rounded-full" style={{width: '85%'}}></div>
                       </div>
                     </div>
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Speed (inverted)</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-yellow-500 h-2 rounded-full" style={{width: '50%'}}></div>
+                        <div className="bg-[#d4a96a] h-2 rounded-full" style={{width: '50%'}}></div>
                       </div>
                     </div>
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Cost Efficiency</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-yellow-500 h-2 rounded-full" style={{width: '60%'}}></div>
+                        <div className="bg-[#d4a96a] h-2 rounded-full" style={{width: '60%'}}></div>
                       </div>
                     </div>
                   </div>
@@ -298,7 +298,7 @@ export default function Experiments() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-amber-400 rounded"></div>
+                      <div className="w-3 h-3 bg-[#c8a84c] rounded"></div>
                       <span className="text-sm font-medium">Research Mode</span>
                     </div>
                     <span className="text-sm text-[#6b6a63]">91% quality • 3.5s • $0.015</span>
@@ -307,19 +307,19 @@ export default function Experiments() {
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Quality</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-amber-400 h-2 rounded-full" style={{width: '91%'}}></div>
+                        <div className="bg-[#c8a84c] h-2 rounded-full" style={{width: '91%'}}></div>
                       </div>
                     </div>
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Speed (inverted)</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-red-500 h-2 rounded-full" style={{width: '17%'}}></div>
+                        <div className="bg-[#c98888] h-2 rounded-full" style={{width: '17%'}}></div>
                       </div>
                     </div>
                     <div>
                       <div className="text-xs text-[#6b6a63] mb-1">Cost Efficiency</div>
                       <div className="w-full bg-[#faf9f5] rounded-full h-2">
-                        <div className="bg-red-500 h-2 rounded-full" style={{width: '20%'}}></div>
+                        <div className="bg-[#c98888] h-2 rounded-full" style={{width: '20%'}}></div>
                       </div>
                     </div>
                   </div>
@@ -328,7 +328,7 @@ export default function Experiments() {
             </div>
 
             {/* Routing Strategy */}
-            <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl p-6 border-2 border-[#e8e6dc] shadow-sm">
+            <div className="bg-gradient-to-r from-[#fdf5f0] to-[#fdf8f0] rounded-2xl p-6 border-2 border-[#e8e6dc] shadow-sm">
               <h3 className="text-base font-semibold mb-3 flex items-center gap-2">
                 <span>💡</span>
                 <span>Intelligent Routing Strategy</span>
@@ -339,7 +339,7 @@ export default function Experiments() {
               <div className="space-y-3">
                 <div className="bg-white rounded-lg p-4 shadow-sm">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">EASY</div>
+                    <div className="px-2 py-1 bg-[#e8f5ec] text-[#6aaa7b] text-xs font-semibold rounded">EASY</div>
                     <span className="text-sm font-medium">→ Fastest Mode</span>
                   </div>
                   <p className="text-sm text-[#6b6a63]">
@@ -348,7 +348,7 @@ export default function Experiments() {
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-sm">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded">MEDIUM</div>
+                    <div className="px-2 py-1 bg-[#fdf3e0] text-[#c8a84c] text-xs font-semibold rounded">MEDIUM</div>
                     <span className="text-sm font-medium">→ Balanced Mode</span>
                   </div>
                   <p className="text-sm text-[#6b6a63]">
@@ -357,7 +357,7 @@ export default function Experiments() {
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-sm">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="px-2 py-1 bg-red-100 text-red-700 text-xs font-semibold rounded">HARD</div>
+                    <div className="px-2 py-1 bg-[#fde8e8] text-[#c98888] text-xs font-semibold rounded">HARD</div>
                     <span className="text-sm font-medium">→ Research Mode</span>
                   </div>
                   <p className="text-sm text-[#6b6a63]">
@@ -365,8 +365,8 @@ export default function Experiments() {
                   </p>
                 </div>
               </div>
-              <div className="mt-4 p-3 bg-orange-100 rounded-lg">
-                <p className="text-sm font-medium text-orange-900">
+              <div className="mt-4 p-3 bg-[#faeade] rounded-lg">
+                <p className="text-sm font-medium text-[#a05538]">
                   Result: 31% cost reduction vs always using Research mode, while maintaining 87% average quality (vs 91% all-Research).
                 </p>
               </div>
@@ -382,7 +382,7 @@ export default function Experiments() {
 
             <div className="bg-white rounded-2xl border border-[#e8e6dc] shadow-sm overflow-hidden">
               <table className="w-full">
-                <thead className="bg-gray-50">
+                <thead className="bg-[#faf9f5]">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-[#6b6a63] uppercase">Model</th>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-[#6b6a63] uppercase">Pass Rate</th>
@@ -417,8 +417,8 @@ export default function Experiments() {
               </table>
             </div>
 
-            <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-              <p className="text-sm text-yellow-900">
+            <div className="mt-4 p-4 bg-[#fdf6e0] border border-[#e8d8a8] rounded-lg">
+              <p className="text-sm text-[#a08040]">
                 💡 <strong>Cost-Quality Tradeoff:</strong> Run evaluations across models to find the optimal balance. 
                 Sometimes a faster, cheaper model performs adequately for your use case.
               </p>
@@ -453,7 +453,7 @@ export default function Experiments() {
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#e8f5ec] rounded-lg flex items-center justify-center">
                     ✓
                   </div>
                   <div>
@@ -463,7 +463,7 @@ export default function Experiments() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-red-500">40%</div>
+                    <div className="text-3xl font-bold text-[#c98888]">40%</div>
                     <div className="text-xs text-[#6b6a63]">agreement</div>
                   </div>
                 </div>
@@ -472,15 +472,15 @@ export default function Experiments() {
               <div className="grid grid-cols-3 gap-4 mb-4">
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Answer Correct</div>
-                  <div className="text-lg font-semibold text-red-500">54%</div>
+                  <div className="text-lg font-semibold text-[#c98888]">54%</div>
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Sources Correct</div>
-                  <div className="text-lg font-semibold text-red-500">18%</div>
+                  <div className="text-lg font-semibold text-[#c98888]">18%</div>
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Response Quality</div>
-                  <div className="text-lg font-semibold text-yellow-600">50%</div>
+                  <div className="text-lg font-semibold text-[#c8a84c]">50%</div>
                 </div>
               </div>
 
@@ -489,10 +489,10 @@ export default function Experiments() {
               </div>
 
               <div className="flex gap-2">
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   👁 View Details
                 </button>
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   🗑 Delete
                 </button>
               </div>
@@ -502,7 +502,7 @@ export default function Experiments() {
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#e8f5ec] rounded-lg flex items-center justify-center">
                     ✓
                   </div>
                   <div>
@@ -512,7 +512,7 @@ export default function Experiments() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-yellow-600">49%</div>
+                    <div className="text-3xl font-bold text-[#c8a84c]">49%</div>
                     <div className="text-xs text-[#6b6a63]">agreement</div>
                   </div>
                 </div>
@@ -525,11 +525,11 @@ export default function Experiments() {
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Sources Correct</div>
-                  <div className="text-lg font-semibold text-red-500">24%</div>
+                  <div className="text-lg font-semibold text-[#c98888]">24%</div>
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Response Quality</div>
-                  <div className="text-lg font-semibold text-yellow-600">47%</div>
+                  <div className="text-lg font-semibold text-[#c8a84c]">47%</div>
                 </div>
               </div>
 
@@ -538,10 +538,10 @@ export default function Experiments() {
               </div>
 
               <div className="flex gap-2">
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   👁 View Details
                 </button>
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   🗑 Delete
                 </button>
               </div>
@@ -551,7 +551,7 @@ export default function Experiments() {
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#e8f5ec] rounded-lg flex items-center justify-center">
                     ✓
                   </div>
                   <div>
@@ -561,7 +561,7 @@ export default function Experiments() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-yellow-600">46%</div>
+                    <div className="text-3xl font-bold text-[#c8a84c]">46%</div>
                     <div className="text-xs text-[#6b6a63]">agreement</div>
                   </div>
                 </div>
@@ -574,11 +574,11 @@ export default function Experiments() {
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Sources Correct</div>
-                  <div className="text-lg font-semibold text-red-500">24%</div>
+                  <div className="text-lg font-semibold text-[#c98888]">24%</div>
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Response Quality</div>
-                  <div className="text-lg font-semibold text-yellow-600">49%</div>
+                  <div className="text-lg font-semibold text-[#c8a84c]">49%</div>
                 </div>
               </div>
 
@@ -587,10 +587,10 @@ export default function Experiments() {
               </div>
 
               <div className="flex gap-2">
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   👁 View Details
                 </button>
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   🗑 Delete
                 </button>
               </div>
@@ -625,7 +625,7 @@ export default function Experiments() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-amber-400 pl-4">
+              <div className="border-l-4 border-[#c8a84c] pl-4">
                 <h4 className="font-semibold mb-2">3. Is the response appropriate?</h4>
                 <div className="text-sm text-[#6b6a63] mb-2">
                   <strong>Options:</strong> Yes (Good) • Partially (Average) • No (Not Good)
@@ -636,7 +636,7 @@ export default function Experiments() {
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+            <div className="mt-6 p-4 bg-[#faf9f5] rounded-lg">
               <p className="text-sm">
                 <strong>Why this works:</strong> Simple yes/partial/no options reduce subjectivity and speed evaluation. 
                 Issue tags provide granular failure analysis without overwhelming evaluators. This enables both human 
@@ -671,7 +671,7 @@ export default function Experiments() {
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#fdf3e0] rounded-lg flex items-center justify-center">
                     <span className="text-xl">⚠️</span>
                   </div>
                   <div>
@@ -680,7 +680,7 @@ export default function Experiments() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-3xl font-bold text-yellow-600">54%</div>
+                  <div className="text-3xl font-bold text-[#c8a84c]">54%</div>
                   <div className="text-xs text-[#6b6a63]">pass rate</div>
                 </div>
               </div>
@@ -688,11 +688,11 @@ export default function Experiments() {
               <div className="grid grid-cols-4 gap-4 mb-4">
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Passed</div>
-                  <div className="text-lg font-semibold text-green-600">15</div>
+                  <div className="text-lg font-semibold text-[#6aaa7b]">15</div>
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Failed</div>
-                  <div className="text-lg font-semibold text-red-600">13</div>
+                  <div className="text-lg font-semibold text-[#c98888]">13</div>
                 </div>
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Avg Latency</div>
@@ -705,13 +705,13 @@ export default function Experiments() {
               </div>
 
               <div className="flex gap-2">
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   📊 View Results
                 </button>
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   🔍 View Cases
                 </button>
-                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-gray-50 transition-all">
+                <button className="px-3 py-1.5 bg-white border border-[#e8e6dc] rounded text-sm hover:bg-[#faf9f5] transition-all">
                   🔄 Re-run
                 </button>
               </div>

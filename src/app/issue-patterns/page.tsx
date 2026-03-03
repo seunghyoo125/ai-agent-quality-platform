@@ -1,10 +1,10 @@
 const statusConfig: Record<string, { label: string; color: string; bg: string }> = {
-  new: { label: 'New', color: 'text-gray-700', bg: 'bg-gray-100' },
-  confirmed: { label: 'Confirmed', color: 'text-yellow-700', bg: 'bg-yellow-100' },
-  diagnosed: { label: 'Diagnosed', color: 'text-orange-700', bg: 'bg-orange-100' },
-  'in-progress': { label: 'In Progress', color: 'text-amber-700', bg: 'bg-amber-100' },
-  verifying: { label: 'Verifying', color: 'text-red-700', bg: 'bg-red-100' },
-  resolved: { label: 'Resolved', color: 'text-green-700', bg: 'bg-green-100' },
+  new: { label: 'New', color: 'text-[#b5b0a8]', bg: 'bg-[#f0efed]' },
+  confirmed: { label: 'Confirmed', color: 'text-[#c8a84c]', bg: 'bg-[#fdf3e0]' },
+  diagnosed: { label: 'Diagnosed', color: 'text-[#d97757]', bg: 'bg-[#faeade]' },
+  'in-progress': { label: 'In Progress', color: 'text-[#d97757]', bg: 'bg-[#faeade]' },
+  verifying: { label: 'Verifying', color: 'text-[#c98888]', bg: 'bg-[#fde8e8]' },
+  resolved: { label: 'Resolved', color: 'text-[#6aaa7b]', bg: 'bg-[#e8f5ec]' },
 }
 
 const lifecycleSteps = ['New', 'Confirmed', 'Diagnosed', 'In Progress', 'Verifying', 'Resolved']
@@ -14,7 +14,7 @@ const patterns = [
     id: 'P-001',
     name: 'Missed authoritative source when conflicting versions present',
     dimension: 'Source Correctness',
-    dimensionColor: 'bg-orange-100 text-orange-700',
+    dimensionColor: 'bg-[#faeade] text-[#d97757]',
     caseCount: 27,
     status: 'in-progress',
     assignee: 'Retrieval Team',
@@ -28,7 +28,7 @@ const patterns = [
     id: 'P-002',
     name: 'Verbosity on synthesis queries',
     dimension: 'Response Quality',
-    dimensionColor: 'bg-orange-100 text-orange-700',
+    dimensionColor: 'bg-[#faeade] text-[#d97757]',
     caseCount: 6,
     status: 'confirmed',
     assignee: 'Prompt Team',
@@ -42,7 +42,7 @@ const patterns = [
     id: 'P-003',
     name: 'Factual errors on version-conflict scenarios',
     dimension: 'Answer Correctness',
-    dimensionColor: 'bg-red-100 text-red-700',
+    dimensionColor: 'bg-[#fde8e8] text-[#c98888]',
     caseCount: 3,
     status: 'diagnosed',
     assignee: 'Dev Team',
@@ -56,7 +56,7 @@ const patterns = [
     id: 'P-004',
     name: "Didn't answer multi-doc synthesis questions",
     dimension: 'Answer Correctness',
-    dimensionColor: 'bg-red-100 text-red-700',
+    dimensionColor: 'bg-[#fde8e8] text-[#c98888]',
     caseCount: 15,
     status: 'new',
     assignee: 'Unassigned',
@@ -135,7 +135,7 @@ export default function IssuePatterns() {
         <div className="flex items-center gap-2">
           {lifecycleSteps.map((step, i) => (
             <div key={step} className="flex items-center gap-2">
-              <span className="text-xs text-gray-700">{step}</span>
+              <span className="text-xs text-[#6b6a63]">{step}</span>
               {i < lifecycleSteps.length - 1 && (
                 <span className="text-[#6b6a63] text-xs">→</span>
               )}
@@ -173,7 +173,7 @@ export default function IssuePatterns() {
                 </div>
                 <div className="text-right text-xs text-[#6b6a63] ml-4 shrink-0">
                   <div className="mb-1">
-                    Assignee: <span className="font-medium text-gray-700">{pattern.assignee}</span>
+                    Assignee: <span className="font-medium text-[#6b6a63]">{pattern.assignee}</span>
                   </div>
                   <div>First seen: {pattern.firstSeen}</div>
                 </div>
@@ -186,7 +186,7 @@ export default function IssuePatterns() {
                   Linked runs:{' '}
                   {pattern.linkedRuns.map((r, i) => (
                     <span key={r}>
-                      <span className="font-mono text-gray-700">{r}</span>
+                      <span className="font-mono text-[#6b6a63]">{r}</span>
                       {i < pattern.linkedRuns.length - 1 ? ', ' : ''}
                     </span>
                   ))}

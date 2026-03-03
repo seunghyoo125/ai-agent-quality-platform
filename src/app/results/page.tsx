@@ -10,25 +10,25 @@ const testerInsights = [
   {
     note: 'Retrieval is pulling outdated document versions in 40% of source-cited failures',
     severity: 'High',
-    severityColor: 'bg-red-100 text-red-700',
+    severityColor: 'bg-[#fde8e8] text-[#c98888]',
     team: 'Retrieval',
   },
   {
     note: 'Agent is verbose on synthesis queries even when it gets the answer right',
     severity: 'Medium',
-    severityColor: 'bg-orange-100 text-orange-700',
+    severityColor: 'bg-[#faeade] text-[#d97757]',
     team: 'Prompt',
   },
   {
     note: 'Missing-info tag concentrates on multi-doc synthesis scenario types',
     severity: 'Medium',
-    severityColor: 'bg-orange-100 text-orange-700',
+    severityColor: 'bg-[#faeade] text-[#d97757]',
     team: 'Dev',
   },
   {
     note: 'Expected answers in 3 cases may be incorrect — flagged for golden set correction',
     severity: 'Low',
-    severityColor: 'bg-blue-100 text-blue-700',
+    severityColor: 'bg-[#e8eef5] text-[#7a95b0]',
     team: 'Data',
   },
 ]
@@ -45,7 +45,7 @@ export default function Results() {
             <h1 className="text-2xl font-semibold">Results Dashboard</h1>
             <Link
               href="/eval-profiles"
-              className="px-2.5 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-medium hover:bg-orange-200"
+              className="px-2.5 py-0.5 bg-[#faeade] text-[#d97757] rounded-full text-xs font-medium hover:bg-[#f5dcd0]"
             >
               Eval Profile: Search/Retrieval
             </Link>
@@ -99,7 +99,7 @@ export default function Results() {
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-1 text-green-600 text-xs font-medium">
+          <div className="flex items-center gap-1 text-[#6aaa7b] text-xs font-medium">
             <span>↑</span>
             <span>+13pp over 3 runs</span>
           </div>
@@ -160,7 +160,7 @@ export default function Results() {
                     <td className="py-3 pr-6 text-[#6b6a63]">{run.passed}/{run.total}</td>
                     <td className="py-3">
                       {delta !== null ? (
-                        <span className={`font-medium ${delta > 0 ? 'text-green-600' : delta < 0 ? 'text-red-600' : 'text-gray-500'}`}>
+                        <span className={`font-medium ${delta > 0 ? 'text-[#6aaa7b]' : delta < 0 ? 'text-[#c98888]' : 'text-[#b5b0a8]'}`}>
                           {delta > 0 ? '+' : ''}{delta}pp
                         </span>
                       ) : (
@@ -181,15 +181,15 @@ export default function Results() {
         <p className="text-sm text-[#6b6a63] mb-4">Latest run — 28 cases</p>
         <div className="grid grid-cols-3 gap-6">
           <div className="text-center">
-            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-2 text-2xl">
+            <div className="w-12 h-12 bg-[#faeade] rounded-xl flex items-center justify-center mx-auto mb-2 text-2xl">
               👤
             </div>
-            <div className="text-2xl font-bold text-orange-700 mb-1">11</div>
+            <div className="text-2xl font-bold text-[#d97757] mb-1">11</div>
             <div className="text-xs text-[#6b6a63]">Human-evaluated cases</div>
             <div className="text-xs text-[#6b6a63] mt-0.5">deep verification</div>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-2 text-2xl">
+            <div className="w-12 h-12 bg-[#faeade] rounded-xl flex items-center justify-center mx-auto mb-2 text-2xl">
               🤖
             </div>
             <div className="text-2xl font-bold text-[#d97757] mb-1">17</div>
@@ -197,11 +197,11 @@ export default function Results() {
             <div className="text-xs text-[#6b6a63] mt-0.5">automated evaluation</div>
           </div>
           <div className="text-center border-l border-[#e8e6dc] pl-6">
-            <div className="text-2xl font-bold text-green-600 mb-1">64%</div>
+            <div className="text-2xl font-bold text-[#6aaa7b] mb-1">64%</div>
             <div className="text-xs text-[#6b6a63]">Human–LLM agreement</div>
             <div className="text-xs text-[#6b6a63] mt-0.5">on 11 overlapping cases</div>
             <div className="mt-3 w-full bg-[#faf9f5] rounded-full h-2">
-              <div className="bg-green-500 h-2 rounded-full" style={{ width: '64%' }} />
+              <div className="bg-[#8fba98] h-2 rounded-full" style={{ width: '64%' }} />
             </div>
           </div>
         </div>
@@ -337,10 +337,10 @@ export default function Results() {
         <p className="text-sm text-[#6b6a63] mb-6">Expected pattern: Easy &gt; Medium &gt; Hard</p>
         <div className="space-y-4">
           {[
-            { label: 'Easy', pct: 71, passed: 11, total: 16 },
-            { label: 'Medium', pct: 52, passed: 9, total: 18 },
-            { label: 'Hard', pct: 29, passed: 2, total: 7 },
-          ].map(({ label, pct, passed, total }) => (
+            { label: 'Easy', pct: 71, passed: 11, total: 16, color: '#8fba98' },
+            { label: 'Medium', pct: 52, passed: 9, total: 18, color: '#d4a96a' },
+            { label: 'Hard', pct: 29, passed: 2, total: 7, color: '#c98888' },
+          ].map(({ label, pct, passed, total, color }) => (
             <div key={label}>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm">{label}</span>
@@ -350,7 +350,7 @@ export default function Results() {
                 </div>
               </div>
               <div className="w-full bg-[#faf9f5] rounded-full h-3">
-                <div className="bg-[#d97757] h-3 rounded-full" style={{ width: `${pct}%` }} />
+                <div className="h-3 rounded-full" style={{ width: `${pct}%`, backgroundColor: color }} />
               </div>
             </div>
           ))}

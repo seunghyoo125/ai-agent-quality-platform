@@ -6,12 +6,12 @@ export default function Calibration() {
           <h1 className="text-2xl font-semibold mb-2">Prompt Calibration</h1>
           <p className="text-sm text-[#6b6a63]">Manage prompts, calibration, and configuration</p>
         </div>
-  
+
         {/* Summary Cards */}
         <div className="grid grid-cols-3 gap-4 mb-8">
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#f0efed] rounded-lg flex items-center justify-center">
                 📋
               </div>
               <div>
@@ -20,10 +20,10 @@ export default function Calibration() {
               </div>
             </div>
           </div>
-  
+
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#e8f5ec] rounded-lg flex items-center justify-center">
                 ✓
               </div>
               <div>
@@ -32,10 +32,10 @@ export default function Calibration() {
               </div>
             </div>
           </div>
-  
+
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#faeade] rounded-lg flex items-center justify-center">
                 ⚡
               </div>
               <div>
@@ -44,10 +44,10 @@ export default function Calibration() {
               </div>
             </div>
           </div>
-  
+
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc] col-span-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#faeade] rounded-lg flex items-center justify-center">
                 📊
               </div>
               <div>
@@ -57,7 +57,7 @@ export default function Calibration() {
             </div>
           </div>
         </div>
-  
+
         {/* Tabs */}
         <div className="mb-6 flex gap-4 border-b border-[#e8e6dc]">
           <button className="px-4 py-2 border-b-2 border-[#d97757] text-[#d97757] font-medium">
@@ -70,17 +70,17 @@ export default function Calibration() {
             Configuration
           </button>
         </div>
-  
+
         {/* Evaluation Section */}
         <div className="mb-8">
           <h2 className="text-base font-semibold mb-4">Evaluation</h2>
           <p className="text-sm text-[#6b6a63] mb-4">Judge and score agent outputs</p>
-  
+
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="font-semibold">LLM-as-Judge</h3>
-                <span className="text-xs px-2 py-1 bg-red-100 text-red-700 rounded mt-1 inline-block">
+                <span className="text-xs px-2 py-1 bg-[#fde8e8] text-[#c98888] rounded mt-1 inline-block">
                   Not Calibrated
                 </span>
               </div>
@@ -104,17 +104,17 @@ export default function Calibration() {
             </p>
           </div>
         </div>
-  
+
         {/* Prioritization Section */}
         <div className="mb-8">
           <h2 className="text-base font-semibold mb-4">Prioritization</h2>
           <p className="text-sm text-[#6b6a63] mb-4">Assess and rank requests</p>
-  
+
           <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="font-semibold">Prioritization Assessment</h3>
-                <span className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded mt-1 inline-block">
+                <span className="text-xs px-2 py-1 bg-[#e8f5ec] text-[#6aaa7b] rounded mt-1 inline-block">
                   Calibrated
                 </span>
               </div>
@@ -132,18 +132,18 @@ export default function Calibration() {
             </p>
           </div>
         </div>
-  
+
         {/* Classification Section */}
         <div>
           <h2 className="text-base font-semibold mb-4">Classification</h2>
           <p className="text-sm text-[#6b6a63] mb-4">Categorize items</p>
-  
+
           <div className="space-y-4">
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="font-semibold">Defect Triage Classifier</h3>
-                  <span className="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded mt-1 inline-block">
+                  <span className="text-xs px-2 py-1 bg-[#f0efed] text-[#b5b0a8] rounded mt-1 inline-block">
                     Planned
                   </span>
                 </div>
@@ -160,12 +160,12 @@ export default function Calibration() {
                 Classifies defects by severity, type, and recommended action
               </p>
             </div>
-  
+
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="font-semibold">Query Difficulty Classifier</h3>
-                  <span className="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded mt-1 inline-block">
+                  <span className="text-xs px-2 py-1 bg-[#f0efed] text-[#b5b0a8] rounded mt-1 inline-block">
                     Planned
                   </span>
                 </div>
@@ -182,12 +182,12 @@ export default function Calibration() {
                 Classifies queries as easy/medium/hard for routing
               </p>
             </div>
-  
+
             <div className="bg-white rounded-2xl p-6 border border-[#e8e6dc]">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="font-semibold">Feedback Type Classifier</h3>
-                  <span className="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded mt-1 inline-block">
+                  <span className="text-xs px-2 py-1 bg-[#f0efed] text-[#b5b0a8] rounded mt-1 inline-block">
                     Planned
                   </span>
                 </div>

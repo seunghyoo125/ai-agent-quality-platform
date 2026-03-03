@@ -64,10 +64,10 @@ export default function LaunchReadiness() {
   
     const getStatusColor = (status: string) => {
       switch(status) {
-        case "At Risk": return "bg-red-100 text-red-700"
-        case "On Track": return "bg-green-100 text-green-700"
-        case "Not Assessed": return "bg-gray-200 text-gray-700"
-        default: return "bg-gray-200 text-gray-700"
+        case "At Risk": return "bg-[#fde8e8] text-[#c98888]"
+        case "On Track": return "bg-[#e8f5ec] text-[#6aaa7b]"
+        case "Not Assessed": return "bg-[#f0efed] text-[#b5b0a8]"
+        default: return "bg-[#f0efed] text-[#b5b0a8]"
       }
     }
   
@@ -97,7 +97,7 @@ export default function LaunchReadiness() {
               <div className="grid grid-cols-4 gap-6 mb-4">
                 <div>
                   <div className="text-xs text-[#6b6a63] mb-1">Pass Rate</div>
-                  <div className={`text-2xl font-bold ${agent.passRate === "—" ? "text-gray-400" : agent.passRate === "54%" ? "text-red-500" : "text-green-600"}`}>
+                  <div className={`text-2xl font-bold ${agent.passRate === "—" ? "text-[#b5b0a8]" : agent.passRate === "54%" ? "text-[#c98888]" : "text-[#6aaa7b]"}`}>
                     {agent.passRate}
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function LaunchReadiness() {
   
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
-                  <div className={`flex items-center gap-2 text-sm mb-2 ${agent.alerts > 0 ? 'text-red-600' : 'text-gray-500'}`}>
+                  <div className={`flex items-center gap-2 text-sm mb-2 ${agent.alerts > 0 ? 'text-[#c98888]' : 'text-[#b5b0a8]'}`}>
                     <span>{agent.alerts > 0 ? '⚠' : '✓'}</span>
                     <span className="font-semibold">ALERTS ({agent.alerts})</span>
                   </div>
@@ -128,7 +128,7 @@ export default function LaunchReadiness() {
                       ))}
                     </div>
                   ) : (
-                    <div className="text-sm text-gray-400">No alerts</div>
+                    <div className="text-sm text-[#b5b0a8]">No alerts</div>
                   )}
                 </div>
                 <div>
